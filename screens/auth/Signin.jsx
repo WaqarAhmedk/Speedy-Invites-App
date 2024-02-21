@@ -1,19 +1,26 @@
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, ScrollView, Text, View } from 'react-native'
 import AuthScreenStyles from './authStyles'
 import TextComponent from '../../components/TextComponent/TextComponent';
 import InputComponent from '../../components/Inputs/InputComponent.jsx';
 const topImage = require('../../assets/images/auth/topflowers.png');
 import CustomStyledButton from '../../components/Button/customStyledButton.jsx';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const fb = require('../../assets/icons/auth/fb.png')
 const google = require('../../assets/icons/auth/google.png')
 
 
-export default function SignIn() {
+export default function SignIn({navigation}) {
+
+    const handleLogin=()=>{
+        navigation.navigate('Premium')
+    }
+
     return (
-        <View style={AuthScreenStyles.mainContainer}>
-            <View style={AuthScreenStyles.topView}>
+        <KeyboardAwareScrollView contentContainerStyle={{ flexGrow: 1 }} >
+           <View style={AuthScreenStyles.mainContainer}>
+             <View style={AuthScreenStyles.topView}>
                 <Image source={topImage} style={{ width: 270, resizeMode: 'stretch' }} />
             </View>
             <View style={AuthScreenStyles.middleView}>
@@ -27,7 +34,7 @@ export default function SignIn() {
                         <TextComponent text={'Forget Password? '} />
 
                     </View>
-                    <CustomStyledButton text={'Sign In'} />
+                    <CustomStyledButton text={'Sign In'} click={handleLogin} />
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 10, gap: 5 }}>
                     <View style={{ flexDirection: 'row', gap: 5 }}>
@@ -57,6 +64,7 @@ export default function SignIn() {
 
                 </View>
             </View>
-        </View>
+           </View>
+        </KeyboardAwareScrollView>
     )
 }

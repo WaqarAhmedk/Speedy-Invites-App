@@ -12,7 +12,7 @@ const AuthScreenStyles = StyleSheet.create({
     middleView:{
         paddingHorizontal:10,
         flex:8,
-        justifyContent:'center',    
+        justifyContent:'flex-start',    
     
     },
     bottomView:{
