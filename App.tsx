@@ -18,6 +18,7 @@ import SignIn from './screens/auth/Signin';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TryPremium from './screens/tryPremium/tryPremium';
+import Home from './screens/home/home';
 
 const Stack = createNativeStackNavigator();
 function App(): React.JSX.Element {
@@ -27,10 +28,11 @@ function App(): React.JSX.Element {
     <SafeAreaView style={{ flex: 1, backgroundColor: '#ffff' }}>
       <NavigationContainer>
         <Stack.Navigator >
-          <Stack.Screen name='Splash' component={SplashScreen} options={{ headerShown: false }} />
+          {/* <Stack.Screen name='Splash' component={SplashScreen} options={{ headerShown: false }} />
           <Stack.Screen name='Signup' component={SignUp} options={{ headerShown: false }} />
           <Stack.Screen name='Signin' component={SignIn} options={{ headerShown: false }} />
-          <Stack.Screen name='Premium' component={TryPremium} options={{ headerShown: false }} />
+          <Stack.Screen name='Premium' component={TryPremium} options={{ headerShown: false }} /> */}
+          <Stack.Screen name='Home' component={Home} options={{ headerShown: false }} />
 
         </Stack.Navigator>
 
