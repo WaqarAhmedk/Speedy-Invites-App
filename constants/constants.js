@@ -1,3 +1,6 @@
+const { imgleft } = require("../assets/images/home");
+const { catimg } = require("../assets/images/home");
+
 const AppColors = {
     mainBackgroundColor: '#7E3CA6',
     white: '#ffff'
@@ -13,120 +16,120 @@ const invitationCategories = [
         title: 'Birthday',
         totalCards: '1300',
         images: [
-            '/assets/images/home/cake-left.png',
-            '/assets/images/home/card.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Wedding',
         totalCards: '900',
         images: [
-            '/assets/images/wedding/rings.png',
-            '/assets/images/wedding/invitation-card.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Baby Shower',
         totalCards: '500',
         images: [
-            '/assets/images/baby-shower/baby-feet.png',
-            '/assets/images/baby-shower/invitation.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Graduation',
         totalCards: '750',
         images: [
-            '/assets/images/graduation/cap.png',
-            '/assets/images/graduation/invitation-scroll.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Anniversary',
         totalCards: '1100',
         images: [
-            '/assets/images/anniversary/heart.png',
-            '/assets/images/anniversary/invitation-card.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Retirement',
         totalCards: '400',
         images: [
-            '/assets/images/retirement/gold-watch.png',
-            '/assets/images/retirement/invitation.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Engagement',
         totalCards: '600',
         images: [
-            '/assets/images/engagement/ring-box.png',
-            '/assets/images/engagement/invitation-card.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Holiday Party',
         totalCards: '800',
         images: [
-            '/assets/images/holiday-party/snowflake.png',
-            '/assets/images/holiday-party/invitation.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Housewarming',
         totalCards: '300',
         images: [
-            '/assets/images/housewarming/key.png',
-            '/assets/images/housewarming/invitation-card.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Bridal Shower',
         totalCards: '700',
         images: [
-            '/assets/images/bridal-shower/umbrella.png',
-            '/assets/images/bridal-shower/invitation.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Dinner Party',
         totalCards: '550',
         images: [
-            '/assets/images/dinner-party/plate-fork-knife.png',
-            '/assets/images/dinner-party/invitation-card.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Graduation',
         totalCards: '900',
         images: [
-            '/assets/images/graduation/cap.png',
-            '/assets/images/graduation/invitation-scroll.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Farewell',
         totalCards: '350',
         images: [
-            '/assets/images/farewell/luggage.png',
-            '/assets/images/farewell/invitation.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Surprise Party',
         totalCards: '600',
         images: [
-            '/assets/images/surprise-party/gift-box.png',
-            '/assets/images/surprise-party/invitation-card.png'
+            catimg,
+            imgleft
         ]
     },
     {
         title: 'Thanksgiving',
         totalCards: '450',
         images: [
-            '/assets/images/thanksgiving/turkey.png',
-            '/assets/images/thanksgiving/invitation.png'
+            catimg,
+            imgleft
         ]
     }
 ];
