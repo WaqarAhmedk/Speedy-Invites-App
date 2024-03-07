@@ -8,9 +8,10 @@ import UserInfo from '../../components/user/userinfo';
 import Invitations from '../invitations/invitations';
 import Greetings from '../greetings/greeting';
 import CustomStyledButton from '../../components/Button/customStyledButton';
+import {useSelector} from 'react-redux';
 export default function Home() {
   const TabItems = [<Invitations />, <Greetings />];
-  const [index, setSelectedIndex] = useState(0);
+  const {tabIndex} = useSelector(state => state.tabs);
 
   return (
     <View style={homeStyles.mainContainer}>
@@ -34,7 +35,7 @@ export default function Home() {
         />
       </View>
       <View style={{flex: 6, flexDirection: 'row', paddingHorizontal: 7}}>
-        {TabItems[index]}
+        {TabItems[tabIndex]}
       </View>
     </View>
   );
