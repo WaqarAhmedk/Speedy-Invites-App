@@ -7,7 +7,6 @@ import CustomStyledButton from '../Button/customStyledButton';
 import {AppColors} from '../../constants/constants';
 import {useDispatch, useSelector} from 'react-redux';
 import {changeTab} from '../../redux/slices/tabSlice';
-import App from '../../App';
 
 const tabsBtns = ['Invitations', 'Greetings', 'Premium'];
 
@@ -24,7 +23,7 @@ export default function HeaderBar() {
         <Image source={bars} />
         <View style={headerStyleSheet.innercontainer}>
           <TextComponent
-            text={'Eventor'}
+            text={'SpeedyInvites'}
             customStyling={headerStyleSheet.headerTitle}
           />
         </View>

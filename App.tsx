@@ -17,6 +17,7 @@ import TryPremium from './screens/tryPremium/tryPremium';
 import Home from './screens/home/home';
 import {Provider} from 'react-redux';
 import {store} from './redux/store/store';
+import Cards from './screens/cards/cards';
 
 const Stack = createNativeStackNavigator();
 function App(): React.JSX.Element {
@@ -25,13 +26,34 @@ function App(): React.JSX.Element {
       <SafeAreaView style={{flex: 1, backgroundColor: '#ffff'}}>
         <NavigationContainer>
           <Stack.Navigator>
-            {/* <Stack.Screen name='Splash' component={SplashScreen} options={{ headerShown: false }} />
-          <Stack.Screen name='Signup' component={SignUp} options={{ headerShown: false }} />
-          <Stack.Screen name='Signin' component={SignIn} options={{ headerShown: false }} />
-          <Stack.Screen name='Premium' component={TryPremium} options={{ headerShown: false }} /> */}
+            {/* <Stack.Screen
+              name="Splash"
+              component={SplashScreen}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Signup"
+              component={SignUp}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Signin"
+              component={SignIn}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Premium"
+              component={TryPremium}
+              options={{headerShown: false}}
+            /> */}
             <Stack.Screen
               name="Home"
               component={Home}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Cards"
+              component={Cards}
               options={{headerShown: false}}
             />
           </Stack.Navigator>

@@ -3,7 +3,6 @@ import {AppColors} from '../../constants/constants';
 
 const headerStylesheet = StyleSheet.create({
   main: {
-    flex: 1,
     backgroundColor: AppColors.mainBackgroundColor,
     paddingHorizontal: 10,
     paddingVertical: 13,

@@ -1,4 +1,4 @@
-package com.eventor
+package com.SpeedyInvites
 
 import android.app.Application
 import com.facebook.react.PackageList

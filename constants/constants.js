@@ -1,6 +1,4 @@
-const {cardimg} = require('../assets/images');
-const {imgleft} = require('../assets/images');
-const {avatar} = require('../assets/images');
+const {imgleft, avatar, cardimg} = require('../assets/images');
 
 const AppColors = {
   mainBackgroundColor: '#7E3CA6',
