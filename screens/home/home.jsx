@@ -19,7 +19,7 @@ import {useSelector} from 'react-redux';
 import InputComponent from '../../components/Inputs/InputComponent';
 import {filters, search} from '../../assets/icons/general';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-export default function Home() {
+export default function Home({navigation}) {
   const TabItems = [<Invitations />, <Greetings />];
   const {tabIndex} = useSelector(state => state.tabs);
 

@@ -16,26 +16,31 @@ const invitationCategories = [
     title: 'Birthday',
     totalCards: '1300',
     images: [cardimg, imgleft],
+    colors: ['#c9ffbf', '#ffafbd'],
   },
   {
     title: 'Wedding',
     totalCards: '900',
     images: [cardimg, imgleft],
+    colors: ['#b993d6', '#8ca6db'],
   },
   {
     title: 'Baby Shower',
     totalCards: '500',
     images: [cardimg, imgleft],
+    colors: ['#00d2ff', '#3a7bd5'],
   },
   {
     title: 'Graduation',
     totalCards: '750',
     images: [cardimg, imgleft],
+    colors: ['#d3959b', '#bfe6ba'],
   },
   {
     title: 'Anniversary',
     totalCards: '1100',
     images: [cardimg, imgleft],
+    colors: ['#00d2ff', '#d3959b'],
   },
   {
     title: 'Retirement',

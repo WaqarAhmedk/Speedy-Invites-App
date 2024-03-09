@@ -23,7 +23,7 @@ export default function HeaderBar() {
         <Image source={bars} />
         <View style={headerStyleSheet.innercontainer}>
           <TextComponent
-            text={'SpeedyInvites'}
+            text={'Speedy Invites'}
             customStyling={headerStyleSheet.headerTitle}
           />
         </View>

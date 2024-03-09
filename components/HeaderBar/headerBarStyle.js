@@ -15,7 +15,7 @@ const headerStylesheet = StyleSheet.create({
     color: AppColors.white,
     fontSize: 25,
     fontWeight: 'bold',
-    marginLeft: 100,
+    marginLeft: 60,
   },
   headerButtonWrapper: {
     backgroundColor: '#ffff',
