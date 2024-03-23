@@ -20,7 +20,10 @@ import InputComponent from '../../components/Inputs/InputComponent';
 import {filters, search} from '../../assets/icons/general';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 export default function Home({navigation}) {
-  const TabItems = [<Invitations />, <Greetings />];
+  const TabItems = [
+    <Invitations navigation={navigation} />,
+    <Greetings navigation={navigation} />,
+  ];
   const {tabIndex} = useSelector(state => state.tabs);
 
   return (
@@ -72,8 +75,11 @@ export default function Home({navigation}) {
             customStyling={{fontSize: 13, color: '#C0ADAD'}}
           />
         </View>
-        <View style={{flex: 6, justifyContent: 'center', alignItems: 'center'}}>
-          <ScrollView style={{flex: 1}} horizontal>
+        <View style={{flex: 6}}>
+          <ScrollView
+            style={{
+              flexGrow: 1,
+            }}>
             {TabItems[tabIndex]}
           </ScrollView>
         </View>

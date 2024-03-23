@@ -18,6 +18,7 @@ import Home from './screens/home/home';
 import {Provider} from 'react-redux';
 import {store} from './redux/store/store';
 import Cards from './screens/cards/cards';
+import {AppColors} from './constants/constants';
 
 const Stack = createNativeStackNavigator();
 function App(): React.JSX.Element {
@@ -54,7 +55,13 @@ function App(): React.JSX.Element {
             <Stack.Screen
               name="Cards"
               component={Cards}
-              options={{headerShown: false}}
+              options={{
+                title: 'My home',
+                headerStyle: {
+                  backgroundColor: AppColors.mainBackgroundColor,
+                },
+                headerTintColor: '#fff',
+              }}
             />
           </Stack.Navigator>
         </NavigationContainer>

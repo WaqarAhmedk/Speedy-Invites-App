@@ -6,42 +6,36 @@ import {AppColors} from '../../constants/constants';
 
 function ItemList({item, index}) {
   return (
-    <TouchableOpacity onPress={() => {}}>
-      <View
-        style={[
-          style.mainContainer,
-          index % 2 === 0
-            ? {
-                paddingRight: 5,
-              }
-            : {
-                paddingLeft: 5,
-              },
-        ]}>
-        <LinearGradient
-          colors={item.colors ? item.colors : ['#b993d6', '#8ca6db']}
-          locations={[0, 0.5, 0.6]}
-          start={{x: 0.0, y: 0.25}}
-          end={{x: 0.5, y: 1.0}}
-          style={{
-            borderRadius: 20,
-          }}>
-          <View style={style.textMainContainer}>
-            <TextComponent
-              text={item.title}
-              customStyling={style.titleCustomStyling}
-            />
-            <TextComponent
-              text={item.totalCards + ' Cards'}
-              customStyling={style.totalCustomStyling}
-            />
-          </View>
-          <View style={style.imageMainContainer}>
-            <Image source={item.images[1]} />
-          </View>
-        </LinearGradient>
+    <View
+      style={[
+        style.mainContainer,
+        index % 2 === 0
+          ? {
+              paddingRight: 5,
+            }
+          : {
+              paddingLeft: 5,
+            },
+      ]}>
+      <View style={{backgroundColor: item.color, borderRadius: 20}}>
+        <View style={style.textMainContainer}>
+          <TextComponent
+            text={item.title}
+            customStyling={style.titleCustomStyling}
+          />
+          <TextComponent
+            text={item.totalCards + ' Cards'}
+            customStyling={style.totalCustomStyling}
+          />
+        </View>
+        <View style={style.imageMainContainer}>
+          <Image
+            source={item.image}
+            style={{height: 100, width: '100%', objectFit: 'contain'}}
+          />
+        </View>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 
@@ -49,9 +43,8 @@ export default ItemList;
 
 const style = StyleSheet.create({
   mainContainer: {
-    flexGrow: 1,
-    width: '50%',
     paddingVertical: 5,
+    paddingHorizontal: 5,
     borderRadius: 20,
     minWidth: 170,
   },
@@ -69,5 +62,8 @@ const style = StyleSheet.create({
     fontSize: 10,
     color: AppColors.white,
   },
-  imageMainContainer: {justifyContent: 'flex-end', alignItems: 'flex-end'},
+  imageMainContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });

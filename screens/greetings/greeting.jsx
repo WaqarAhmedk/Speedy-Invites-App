@@ -17,6 +17,7 @@ export default function Greetings() {
   };
   return (
     <FlatList
+      scrollEnabled={false}
       numColumns={2}
       data={invitationCategories}
       keyExtractor={(item, index) => index.toString()}
