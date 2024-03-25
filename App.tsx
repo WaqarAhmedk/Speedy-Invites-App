@@ -19,6 +19,7 @@ import {Provider} from 'react-redux';
 import {store} from './redux/store/store';
 import Cards from './screens/cards/cards';
 import {AppColors} from './constants/constants';
+import EditCard from './screens/cards/editCard';
 
 const Stack = createNativeStackNavigator();
 function App(): React.JSX.Element {
@@ -27,7 +28,7 @@ function App(): React.JSX.Element {
       <SafeAreaView style={{flex: 1, backgroundColor: '#ffff'}}>
         <NavigationContainer>
           <Stack.Navigator>
-            {/* <Stack.Screen
+            <Stack.Screen
               name="Splash"
               component={SplashScreen}
               options={{headerShown: false}}
@@ -46,7 +47,7 @@ function App(): React.JSX.Element {
               name="Premium"
               component={TryPremium}
               options={{headerShown: false}}
-            /> */}
+            />
             <Stack.Screen
               name="Home"
               component={Home}
@@ -57,6 +58,17 @@ function App(): React.JSX.Element {
               component={Cards}
               options={{
                 title: 'My home',
+                headerStyle: {
+                  backgroundColor: AppColors.mainBackgroundColor,
+                },
+                headerTintColor: '#fff',
+              }}
+            />
+            <Stack.Screen
+              name="Edit"
+              component={EditCard}
+              options={{
+                title: 'Edit Card',
                 headerStyle: {
                   backgroundColor: AppColors.mainBackgroundColor,
                 },

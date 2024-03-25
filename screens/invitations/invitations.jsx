@@ -17,7 +17,10 @@ export default function Invitations({navigation}) {
               width: '49%',
             }}
             onPress={() =>
-              navigation.navigate('Cards', {id: item.id, category: item.title})
+              navigation.navigate('Cards', {
+                id: item.id,
+                category: item.title,
+              })
             }>
             <ItemList item={item} index={index} />
           </TouchableOpacity>

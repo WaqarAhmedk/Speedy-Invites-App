@@ -118,7 +118,7 @@ const invitationCategories = [
 ];
 
 const cards = [
-  {id: 1, catId: 3, name: 'Design 1', imgUrl: card1},
+  {id: 1, catId: 3, name: 'Wedding Card with Flowers', imgUrl: card1},
   {id: 3, catId: 5, name: 'Design 3', imgUrl: card1},
   {id: 4, catId: 11, name: 'Design 4', imgUrl: card2},
   {id: 5, catId: 2, name: 'Design 5', imgUrl: card1},
@@ -148,18 +148,34 @@ const cards = [
   {id: 15, catId: 3, name: 'Design 15', imgUrl: card1},
 ];
 
-// Assuming `cardimg` and `imgleft` are defined elsewhere in your code
-
 const user = {
   name: 'Waqar AHmed',
   email: 'waqar@gmail.com',
   avatar: avatar,
 };
 
+const options = [
+  {
+    name: 'delete',
+  },
+  {
+    name: 'edit',
+  },
+  {
+    name: 'font Size',
+  },
+  {
+    name: 'color',
+  },
+  {
+    name: 'Bold',
+  },
+];
 module.exports = {
   AppColors,
   premiumFeatures,
   invitationCategories,
   user,
   cards,
+  options,
 };

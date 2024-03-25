@@ -13,19 +13,22 @@ import TextComponent from '../../components/TextComponent/TextComponent';
 
 export default function Cards({navigation, route}) {
   console.log('navigation: ', route);
-  // const {id, category} = route.params;
-  // const Cards = cards.filter(card => {
-  //   return card.catId === id;
-  // });
+  const {id, category} = route.params;
+  const Cards = cards.filter(card => {
+    return card.catId === id;
+  });
 
   const RenderItem = ({item}) => {
     return (
       <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Edit', {cardId: item.id});
+        }}
         style={{
           flex: 1,
           width: '50%',
           flexGrow: 1,
-          marginVertical: 10,
+          paddingVertical: 10,
           alignItems: 'center',
           gap: 5,
         }}>
@@ -35,11 +38,20 @@ export default function Cards({navigation, route}) {
         />
         <View
           style={{
+            marginTop: 5,
             flexDirection: 'row',
-            backgroundColor: 'red',
+            justifyContent: 'space-between',
+            paddingHorizontal: 10,
             width: '95%',
           }}>
-          <TextComponent text={item.name} />
+          <TextComponent
+            text={item.name}
+            customStyling={{
+              fontSize: 15,
+              fontWeight: 'semi bold',
+              color: 'black',
+            }}
+          />
           <TextComponent text={item.id} />
         </View>
       </TouchableOpacity>
@@ -48,7 +60,7 @@ export default function Cards({navigation, route}) {
   return (
     <FlatList
       numColumns={2}
-      data={cards}
+      data={Cards}
       keyExtractor={(item, index) => index.toString()}
       renderItem={RenderItem}
     />
